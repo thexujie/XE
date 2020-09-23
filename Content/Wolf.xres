@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mesh DisplayName="狼" Resource="Wolf.xmesh">
+  <Materials>
+    <Material SlotName="" Include="Materials/Default.xres"/>
+  </Materials>
+</Mesh>

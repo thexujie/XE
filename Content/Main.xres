@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map DisplayName="测试">
+  <Actor Resource="Models/Wolf.xres">
+
+  </Actor>
+</Map>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)$(Configuration)_$(PlatformTarget)_$(PlatformToolset)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)_$(PlatformTarget)_$(PlatformToolset)\$(ProjectName).$(ProjectGuid)\</IntDir>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
+      <ObjectFileName>$(IntDir)%(RelativeDir)\</ObjectFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>.\;$(SolutionDir)Runtime\;$(SolutionDir)Externals\;$(SolutionDir)Plugins\</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);XEngine_$(MSBuildProjectName.Replace('.', '_'))_Module</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Derived.User.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Derived.User.props" />
+</Project>

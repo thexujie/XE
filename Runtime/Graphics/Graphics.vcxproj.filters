@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="Imaging\Image.cpp">
+      <Filter>Imaging</Filter>
+    </ClCompile>
+    <ClCompile Include="Pixmap.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Brush.cpp" />
+    <ClCompile Include="FormattedText.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="Imaging\Image.h">
+      <Filter>Imaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="Pixmap.h" />
+    <ClInclude Include="Surface.h" />
+    <ClInclude Include="TextLayout.h" />
+    <ClInclude Include="Brush.h" />
+    <ClInclude Include="GraphicsInc.h" />
+    <ClInclude Include="Typeface.h" />
+    <ClInclude Include="FormattedText.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Imaging">
+      <UniqueIdentifier>{28fcc7f4-6fa7-485b-b35b-5fe737fd648b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

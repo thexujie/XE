@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fbx">
+      <UniqueIdentifier>{32da098f-33b4-4ad3-85ab-0e2baebe0010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fbx\ForsythTriOO">
+      <UniqueIdentifier>{8aa76a32-66d9-4ffb-be84-07a320335d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fbx\mikktspace">
+      <UniqueIdentifier>{899cc063-cb2a-4c74-ba65-ae5823d9a1e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fbx\DataConverter.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\FbxModel.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_BoneTrackers.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Calc.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Helpers.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Mesh.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Model.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_MorphTargets.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Sections.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\Importer_Utils.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\OverlappingCorners.cpp">
+      <Filter>fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\mikktspace\mikktspace.cpp">
+      <Filter>fbx\mikktspace</Filter>
+    </ClCompile>
+    <ClCompile Include="fbx\ForsythTriOO\forsythtriangleorderoptimizer.cpp">
+      <Filter>fbx\ForsythTriOO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fbx\DataConverter.h">
+      <Filter>fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\Fbx.h">
+      <Filter>fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\FbxModel.h">
+      <Filter>fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\Importer.h">
+      <Filter>fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\OverlappingCorners.h">
+      <Filter>fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\mikktspace\mikktspace.h">
+      <Filter>fbx\mikktspace</Filter>
+    </ClInclude>
+    <ClInclude Include="fbx\ForsythTriOO\forsythtriangleorderoptimizer.h">
+      <Filter>fbx\ForsythTriOO</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

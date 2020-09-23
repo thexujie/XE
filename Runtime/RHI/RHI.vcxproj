@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1C0A72C1-917B-47A1-8CC3-F416D7D7DC66}</ProjectGuid>
+  </PropertyGroup>
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Default.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Derived.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Derived.props" />
+  <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemGroup>
+    <ClCompile Include="PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RHI.cpp" />
+    <ClCompile Include="RHICommandAllocator.cpp" />
+    <ClCompile Include="RHICommandList.cpp" />
+    <ClCompile Include="RHICommandQueue.cpp" />
+    <ClCompile Include="RHIDescriptorHeap.cpp" />
+    <ClCompile Include="RHIDescriptorTable.cpp" />
+    <ClCompile Include="RHIDevice.cpp" />
+    <ClCompile Include="RHIFence.cpp" />
+    <ClCompile Include="RHIInc.cpp" />
+    <ClCompile Include="RHIPipelineState.cpp" />
+    <ClCompile Include="RHIResource.cpp" />
+    <ClCompile Include="RHIRootSignature.cpp" />
+    <ClCompile Include="RHIShader.cpp" />
+    <ClCompile Include="RHISwapChain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="RHI.h" />
+    <ClInclude Include="RHICommandAllocator.h" />
+    <ClInclude Include="RHICommandList.h" />
+    <ClInclude Include="RHICommandQueue.h" />
+    <ClInclude Include="RHIDescriptorHeap.h" />
+    <ClInclude Include="RHIDescriptorTable.h" />
+    <ClInclude Include="RHIDevice.h" />
+    <ClInclude Include="RHIFence.h" />
+    <ClInclude Include="RHIInc.h" />
+    <ClInclude Include="RHIPipelineState.h" />
+    <ClInclude Include="RHIResource.h" />
+    <ClInclude Include="RHIResourceView.h" />
+    <ClInclude Include="RHIRootSignature.h" />
+    <ClInclude Include="RHIShader.h" />
+    <ClInclude Include="RHISwapChain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{0cd56909-021a-4656-baf7-c1183fd6dff8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

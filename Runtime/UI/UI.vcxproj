@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FBB888B-4ABB-41DD-A7B8-B7A6A965A9FD}</ProjectGuid>
+  </PropertyGroup>
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Default.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Derived.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Derived.props" />
+  <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemGroup>
+    <ClCompile Include="ContentControl.cpp" />
+    <ClCompile Include="Controls\Border.cpp" />
+    <ClCompile Include="Controls\Button.cpp" />
+    <ClCompile Include="Controls\StackPanel.cpp" />
+    <ClCompile Include="Decorator.cpp" />
+    <ClCompile Include="Element_Converter.cpp" />
+    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="Form_Windows.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="Panel.cpp" />
+    <ClCompile Include="ElementRouter.cpp" />
+    <ClCompile Include="Style.cpp" />
+    <ClCompile Include="UIInc.cpp" />
+    <ClCompile Include="Visuals\Shape.cpp" />
+    <ClCompile Include="XuiService.cpp" />
+    <ClInclude Include="ContentControl.h" />
+    <ClInclude Include="Controls\Border.h" />
+    <ClCompile Include="Controls\TitleBar.cpp" />
+    <ClCompile Include="Layout.cpp" />
+    <ClCompile Include="ContentPresenter.cpp" />
+    <ClCompile Include="Property.cpp" />
+    <ClCompile Include="ControlTemplate.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UIFactory.cpp" />
+    <ClCompile Include="Visual.cpp" />
+    <ClCompile Include="Visuals\Rectangle.cpp" />
+    <ClCompile Include="Visuals\TextBlock.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Form.cpp" />
+    <ClCompile Include="PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Window.cpp" />
+    <ClInclude Include="Controls\StackPanel.h" />
+    <ClInclude Include="Decorator.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Panel.h" />
+    <ClInclude Include="ElementRouter.h" />
+    <ClInclude Include="Style.h" />
+    <ClInclude Include="Visuals\Shape.h" />
+    <ClInclude Include="XuiService.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Controls\Button.h" />
+    <ClInclude Include="Controls\TitleBar.h" />
+    <ClInclude Include="Layout.h" />
+    <ClInclude Include="ContentPresenter.h" />
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="ControlTemplate.h" />
+    <ClInclude Include="UIFactory.h" />
+    <ClInclude Include="Visual.h" />
+    <ClInclude Include="Visuals\Rectangle.h" />
+    <ClInclude Include="Visuals\TextBlock.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="Form.h" />
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UIInc.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{0cd56909-021a-4656-baf7-c1183fd6dff8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Graphics\Graphics.vcxproj">
+      <Project>{ebb75dfe-d3a4-4378-8b17-ea9a41188798}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

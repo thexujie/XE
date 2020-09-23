@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0520A025-EB95-4A80-9317-D05CAC08970E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Default.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Condition="Exists('$(SolutionDir)Build\MSBuild\Cpp.Derived.props')" Project="$(SolutionDir)Build\MSBuild\Cpp.Derived.props" />
+  <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemGroup>
+    <ClCompile Include="PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RHID3D12.cpp" />
+    <ClCompile Include="RHID3D12CommandAllocator.cpp" />
+    <ClCompile Include="RHID3D12CommandList.cpp" />
+    <ClCompile Include="RHID3D12CommandQueue.cpp" />
+    <ClCompile Include="RHID3D12Core.cpp" />
+    <ClCompile Include="RHID3D12DescriptorHeap.cpp" />
+    <ClCompile Include="RHID3D12DescriptorTable.cpp" />
+    <ClCompile Include="RHID3D12Device.cpp" />
+    <ClCompile Include="RHID3D12Factory.cpp" />
+    <ClCompile Include="RHID3D12Fence.cpp" />
+    <ClCompile Include="RHID3D12Inc.cpp" />
+    <ClCompile Include="RHID3D12PipelineState.cpp" />
+    <ClCompile Include="RHID3D12Resource.cpp" />
+    <ClCompile Include="RHID3D12ResourceView.cpp" />
+    <ClCompile Include="RHID3D12RootSignature.cpp" />
+    <ClCompile Include="RHID3D12Shader.cpp" />
+    <ClCompile Include="RHID3D12SwapChain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="RHID3D12.h" />
+    <ClInclude Include="RHID3D12API.h" />
+    <ClInclude Include="RHID3D12CommandAllocator.h" />
+    <ClInclude Include="RHID3D12CommandList.h" />
+    <ClInclude Include="RHID3D12CommandQueue.h" />
+    <ClInclude Include="RHID3D12Core.h" />
+    <ClInclude Include="RHID3D12DescriptorHeap.h" />
+    <ClInclude Include="RHID3D12DescriptorTable.h" />
+    <ClInclude Include="RHID3D12Device.h" />
+    <ClInclude Include="RHID3D12Factory.h" />
+    <ClInclude Include="RHID3D12Fence.h" />
+    <ClInclude Include="RHID3D12Inc.h" />
+    <ClInclude Include="RHID3D12PipelineState.h" />
+    <ClInclude Include="RHID3D12Resource.h" />
+    <ClInclude Include="RHID3D12ResourceView.h" />
+    <ClInclude Include="RHID3D12RootSignature.h" />
+    <ClInclude Include="RHID3D12Shader.h" />
+    <ClInclude Include="RHID3D12SwapChain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{0cd56909-021a-4656-baf7-c1183fd6dff8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\RHI\RHI.vcxproj">
+      <Project>{1c0a72c1-917b-47a1-8cc3-f416d7d7dc66}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

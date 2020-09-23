@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary  xmlns:x="XE">
+	<SolidBrush x:Key="BlackBrush" Color="Red"/>
+	<Style x:Key="{x:Type Form}" TargetType="{x:Type Form}">
+		<Setter Name="Background" Value="LightGray" />
+		<Setter Name="Template">
+			<ControlTemplate TargetType="{x:Type Form}">
+				<ContentPresenter />
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</ResourceDictionary>

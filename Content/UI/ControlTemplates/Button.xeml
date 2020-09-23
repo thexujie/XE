@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary>
+	<Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+		<Setter Name="Template">
+			<ControlTemplate TargetType="{x:Type Button}">
+				<Border Name="PART_Border" BorderThickness="2" Padding="10" BorderBrush="Gray" Background="LightCyan">
+					<ContentPresenter />
+				</Border>
+				<ControlTemplate.VisualStates>
+					<VisualState Name="Normal" />
+					<VisualState Name="MouseOver">
+						<PropertyTransiation Property="{PART_Border.Background.Color}" Value="Red" Duration="200"/>
+					</VisualState>
+					<VisualState Name="Pressed">
+						<PropertyTransiation Property="{PART_Border.Background.Color}" Value="Red" Duration="200"/>
+					</VisualState>
+				</ControlTemplate.VisualStates>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

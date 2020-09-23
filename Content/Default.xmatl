@@ -1,0 +1,24 @@
+
+#pragma pack_matrix(row_major)
+
+#include "Common.hlsli"
+
+cbuffer MaterialParemeter : register(RootBufferIndex_Material)
+{
+    float3 Color;
+};
+
+Texture2D<float4> Image : register(t3);
+SamplerState LinerSampler : register(s0);
+
+struct VSOutput
+{
+    float4 Position : SV_POSITION;
+    float2 Texcoord: TEXCOORD;
+};
+
+float4 PSMain(VSOutput Input) : SV_TARGET
+{
+    float4 Color = Image.Sample(LinerSampler, Input.Texcoord);
+    return float4(Color.rgb, 1);
+}

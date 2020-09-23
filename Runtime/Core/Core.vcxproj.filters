@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Platform\Win32\Win32.cpp">
+      <Filter>Platform\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Local.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Logger.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DateTime.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\System.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\String.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Map.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Threading\ConditionalVariable.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Threading\Mutex.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Threading\Signal.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Thread.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Hash.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Window.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\Path.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\File.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Vector2.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Vector3.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Vector4.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Matrix.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Quat.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Random.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\FileStream.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Xml.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\fmt\format.cc">
+      <Filter>Base\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\fmt\os.cc">
+      <Filter>Base\fmt</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\FileLinePeriod.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\Directory.cpp">
+      <Filter>IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Allcoator.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Delegate.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Object.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\Win32\Win32Common.cpp">
+      <Filter>Platform\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Library.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Module.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Guid.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\StringView.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="Core\Blob.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Transform.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform\Win32\Windows.cpp">
+      <Filter>Platform\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Type.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Types.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Color.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Counter.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Base.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Application.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Resource.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\ResourceDictionary.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Variant.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\NativeType.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Name.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Culture.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Regex.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\StringStream.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Base\Formatter.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Debug.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base\Config.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Types.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CoreInc.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Base.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="Base\Utils.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Atomic.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Flag.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\xm\xm.h">
+      <Filter>Base\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\xm\xmf.h">
+      <Filter>Base\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\xm\xmi.h">
+      <Filter>Base\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\xm\xmi_argb.h">
+      <Filter>Base\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\xm\xmm.h">
+      <Filter>Base\xm</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Win32\Win32.h">
+      <Filter>Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Local.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Logger.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DateTime.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\ConditionalVariable.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\UniqueLock.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\LockGuard.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\ThreadingInc.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\System.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\String.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\StringView.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Array.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Format.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Map.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Pair.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\SharedPtr.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\UniquePtr.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\UnorderedMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vector.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\Mutex.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Function.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Threading\Signal.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Thread.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Apply.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Hash.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\HashMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\LinearHashMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Window.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UIInc.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\IOInc.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\Path.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\File.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vector2.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vector3.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vector4.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Matrix.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Quat.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vec2.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vec3.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Vec4.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Tuple.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\RBTree.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Set.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\MultiMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Random.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\FileStream.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Stream.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Archive.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\MemoryStream.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Xml.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\chrono.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\color.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\compile.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\core.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\format.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\format-inl.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\locale.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\os.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\ostream.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\posix.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\printf.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\fmt\ranges.h">
+      <Filter>Base\fmt</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\FileLinePeriod.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\Directory.h">
+      <Filter>IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\ReferPtr.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Bind.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Allcoator.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Delegate.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Object.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Win32\Unkown.h">
+      <Filter>Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Win32\Win32Inc.h">
+      <Filter>Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Win32\Win32Common.h">
+      <Filter>Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Library.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Module.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Guid.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Pointer.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Fraction.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="Core\Blob.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Transform.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform\Win32\Windows.h">
+      <Filter>Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Reference.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\DataConverter.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Type.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\StringStream.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NativeType.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Variant.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Color.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\CommandList.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Counter.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Converters.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Application.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Resource.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ResourceDictionary.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\LinearMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Name.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\List.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Resumable.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Enumerable.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Culture.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Regex.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\BitSet.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Base\Formatter.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Debug.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{4841441c-6ab6-4c33-b796-0060d4dea0cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{1794a184-0251-48f5-9783-e019f8a2459a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{952507b9-5f40-4533-87fe-0c1b3a8e6afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\xm">
+      <UniqueIdentifier>{e8941b8c-340f-4727-8c34-8aaab51e49c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Win32">
+      <UniqueIdentifier>{deab4769-4e11-47ff-af40-2d101ef3852b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{22c317f9-a5ab-460e-9c72-f84613525774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\fmt">
+      <UniqueIdentifier>{0ec7cb54-182e-4b72-b67f-6acf4f666415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{904f0b63-6db8-4dd7-b84e-718a31d7c8e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO">
+      <UniqueIdentifier>{f9a84d80-bf9e-4307-bc38-199f06303893}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Base\xm\xmf_base.inl">
+      <Filter>Base\xm</Filter>
+    </None>
+    <None Include="Base\xm\xmf_matr.inl">
+      <Filter>Base\xm</Filter>
+    </None>
+    <None Include="Base\xm\xmf_quat.inl">
+      <Filter>Base\xm</Filter>
+    </None>
+    <None Include="Base\xm\xmf_vec.inl">
+      <Filter>Base\xm</Filter>
+    </None>
+  </ItemGroup>
+</Project>

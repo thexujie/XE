@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="Visuals\Rectangle.cpp">
+      <Filter>Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Layout.cpp" />
+    <ClCompile Include="Visual.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="Form.cpp" />
+    <ClCompile Include="Controls\Button.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals\TextBlock.cpp">
+      <Filter>Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Controls\TitleBar.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Property.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UIFactory.cpp" />
+    <ClCompile Include="Controls\Border.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Visuals\Shape.cpp">
+      <Filter>Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="Form_Windows.cpp" />
+    <ClCompile Include="ControlTemplate.cpp" />
+    <ClCompile Include="Panel.cpp" />
+    <ClCompile Include="ContentPresenter.cpp" />
+    <ClCompile Include="XuiService.cpp" />
+    <ClCompile Include="ContentControl.cpp" />
+    <ClCompile Include="Style.cpp" />
+    <ClCompile Include="Element.cpp" />
+    <ClCompile Include="Decorator.cpp" />
+    <ClCompile Include="Controls\StackPanel.cpp">
+      <Filter>Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Element_Converter.cpp" />
+    <ClCompile Include="ElementRouter.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="UIInc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="Visuals\Rectangle.h">
+      <Filter>Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="Layout.h" />
+    <ClInclude Include="Visual.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="Form.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UIInc.h" />
+    <ClInclude Include="Controls\Button.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals\TextBlock.h">
+      <Filter>Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="Controls\TitleBar.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Property.h" />
+    <ClInclude Include="UIFactory.h" />
+    <ClInclude Include="Controls\Border.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Visuals\Shape.h">
+      <Filter>Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlTemplate.h" />
+    <ClInclude Include="Panel.h" />
+    <ClInclude Include="ContentPresenter.h" />
+    <ClInclude Include="XuiService.h" />
+    <ClInclude Include="ContentControl.h" />
+    <ClInclude Include="Style.h" />
+    <ClInclude Include="Element.h" />
+    <ClInclude Include="Decorator.h" />
+    <ClInclude Include="Controls\StackPanel.h">
+      <Filter>Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementRouter.h" />
+    <ClInclude Include="Keyboard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Visuals">
+      <UniqueIdentifier>{9af19162-bc0a-451d-818b-9ddf589845a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{5afd2f80-ae38-457a-832b-3a7084589db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Decorators">
+      <UniqueIdentifier>{4efa3425-9df3-446f-91e0-e1fec6759797}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

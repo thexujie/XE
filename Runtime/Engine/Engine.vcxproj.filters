@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="PCH.cpp" />
+    <ClCompile Include="Materials\ColorMaterial.cpp">
+      <Filter>Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Materials\TextureMaterial.cpp">
+      <Filter>Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTargets\NormalRenderTarget.cpp">
+      <Filter>RenderTargets</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPasses\BlendPass.cpp">
+      <Filter>RenderPasses</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPasses\ScenePass.cpp">
+      <Filter>RenderPasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderables\ViewRectGeometry.cpp">
+      <Filter>Renderables</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetFactory.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="ScenePrimitive.cpp" />
+    <ClCompile Include="StaticMeshPrimitive.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="EngineResource.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PCH.h" />
+    <ClInclude Include="Materials\ColorMaterial.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Materials\TextureMaterial.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTargets\NormalRenderTarget.h">
+      <Filter>RenderTargets</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPasses\BlendPass.h">
+      <Filter>RenderPasses</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPasses\ScenePass.h">
+      <Filter>RenderPasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderables\ViewRectGeometry.h">
+      <Filter>Renderables</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetFactory.h" />
+    <ClInclude Include="EngineInc.h" />
+    <ClInclude Include="ResourceFactory.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="ScenePrimitive.h" />
+    <ClInclude Include="StaticMeshPrimitive.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="UserInterface.h" />
+    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Include.h" />
+    <ClInclude Include="EngineResource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Materials">
+      <UniqueIdentifier>{72107811-0eeb-4c26-93e7-12d5a99ee90c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderables">
+      <UniqueIdentifier>{40be103b-fa57-4813-852c-d29a5b06b178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderPasses">
+      <UniqueIdentifier>{cd9ee146-6d5a-42ec-82eb-bd6bbb9f050f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderTargets">
+      <UniqueIdentifier>{9e7659c8-0ef1-43d8-8c88-6099e895d163}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

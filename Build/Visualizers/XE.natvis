@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="std::basic_string&lt;char8_t,*&gt;">
+		<Intrinsic Name="size" Expression="_Mypair._Myval2._Mysize" />
+		<Intrinsic Name="capacity" Expression="_Mypair._Myval2._Myres" />
+		<!--_BUF_SIZE = 16 / sizeof(char32_t) &lt; 1 ? 1 : 16 / sizeof(char32_t) == 16-->
+		<Intrinsic Name="bufSize" Expression="16" />
+		<Intrinsic Name="isShortString" Expression="capacity() &lt; bufSize()" />
+		<Intrinsic Name="isLongString" Expression="capacity() &gt;= bufSize()" />
+		<DisplayString Condition="isShortString()">{_Mypair._Myval2._Bx._Alias,s8}</DisplayString>
+		<DisplayString Condition="isLongString()">{*(char**)(&amp;(_Mypair._Myval2._Bx._Alias[0])),s8}</DisplayString>
+		<!--<DisplayString Condition="isLongString()">{{isLongString}}</DisplayString>-->
+	</Type>
+
+	<Type Name="std::basic_string_view&lt;char8_t,*&gt;">
+		<DisplayString>{*((char**)this),s8}</DisplayString>
+		<Expand>
+			<Item Name="[size]" ExcludeView="simple">_Mysize</Item>
+			<ArrayItems>
+				<Size>_Mysize</Size>
+				<ValuePointer>*((char**)this)</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::FDateTime">
+		<DisplayString>{{{Year}-{Month}-{Day} {Hour}:{Minute}:{Second} {Millisecond}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FXmlDocument">
+		<DisplayString>{{[{FilePath}]}}</DisplayString>
+	</Type>
+	<Type Name="XE::FXmlNode">
+		<DisplayString>{{[{DebugName}]}}</DisplayString>
+	</Type>
+	<Type Name="XE::FXmlAttribute">
+		<DisplayString>{{{DebugName}={DebugValue}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::IRefer">
+		<DisplayString>{{ReferCount={ReferCount}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FType">
+		<DisplayString Condition="NativeType == nullptr">{{&lt;Unkown Type&gt;}}</DisplayString>
+		<DisplayString Condition="NativeType->StdTypeInfo._Data._UndecoratedName != nullptr">{{Type {NativeType->StdTypeInfo._Data._UndecoratedName,na}}</DisplayString>
+		<DisplayString Condition="NativeType->StdTypeInfo._Data._DecoratedName != nullptr">{{Type {NativeType->StdTypeInfo._Data._DecoratedName,na}}</DisplayString>
+	</Type>
+
+
+	<Type Name="XE::FNameSpace">
+		<DisplayString >{{{Name}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FName">
+		<DisplayString Condition="NameSpace.Name.Data == nullptr">{{{Name}}}</DisplayString>
+		<DisplayString Condition="NameSpace.Name.Data != nullptr">{{{NameSpace.Name}:{Name}}}</DisplayString>
+		<Expand HideRawView="false">
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TPropertyAccessor&lt;*&gt;">
+		<DisplayString>{{Property {Name}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FProperty">
+		<DisplayString>{PropertyAccessor,na}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FVector2">
+		<DisplayString>{{{X}, {Y}}}</DisplayString>
+	</Type>
+	<Type Name="XE::FVector3">
+		<DisplayString>{{{X}, {Y}, {Z}}}</DisplayString>
+	</Type>
+	<Type Name="XE::FVector4">
+		<DisplayString>{{{X}, {Y}, {Z}, {W}}}</DisplayString>
+	</Type>
+	<Type Name="XE::FQuat">
+		<DisplayString>{{{X}, {Y}, {Z}, {W}}}</DisplayString>
+	</Type>
+	<Type Name="XE::FMatrix">
+		<DisplayString>{{{Row0},{Row1},{Row2},{Row3}}}</DisplayString>
+		<Expand>
+			<Item Name="[0]">Row0</Item>
+			<Item Name="[1]">Row1</Item>
+			<Item Name="[2]">Row2</Item>
+			<Item Name="[3]">Row3</Item>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::FVariant">
+		<DisplayString Condition="ValueType==XE::EValueType::None">Null</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Bool">{ValueType,en} {BoolValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Char">{ValueType,en} {CharValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::WChar">{ValueType,en} {WCharValue}</DisplayString>
+		<!--<DisplayString Condition="ValueType==XE::EValueType::Char8">{Char8Value}</DisplayString>-->
+		<DisplayString Condition="ValueType==XE::EValueType::Int8">{ValueType,en} {Int8Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::UInt8">{ValueType,en} {UInt8Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Int16">{ValueType,en} {Int16Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::UInt16">{ValueType,en} {UInt16Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Int32">{ValueType,en} {Int32Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::UInt32">{ValueType,en} {UInt32Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Int64">{ValueType,en} {Int64Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::UInt64">{ValueType,en} {UInt64Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Float32">{ValueType,en} {Float32Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Float64">{ValueType,en} {Float64Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Color">{ValueType,en} {ColorValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec2F">{ValueType,en} {Vec2FValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec3F">{ValueType,en} {Vec3FValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec4F">{ValueType,en} {Vec4FValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec2I">{ValueType,en} {Vec2IValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec3I">{ValueType,en} {Vec3IValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec4I">{ValueType,en} {Vec4IValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec2U">{ValueType,en} {Vec2UValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec3U">{ValueType,en} {Vec3UValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vec4U">{ValueType,en} {Vec4UValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vector2">{ValueType,en} {Vector2Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vector3">{ValueType,en} {Vector3Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Vector4">{ValueType,en} {Vector4Value}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::String">{ValueType,en} {StringValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::StringView">{ValueType,en} {StringViewValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Type &amp;&amp; NativeTypeValue == nullptr">{ValueType,en} &lt;Unkonwn Type&gt;</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Type &amp;&amp; NativeTypeValue->StdTypeInfo._Data._UndecoratedName != nullptr">{ValueType,en} {NativeTypeValue->StdTypeInfo._Data._UndecoratedName,na}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Enum &amp;&amp; EnumType->_Data._UndecoratedName != nullptr">{ValueType,en} {EnumValue}, {EnumType->_Data._UndecoratedName,na}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Enum &amp;&amp; EnumType->_Data._DecoratedName != nullptr">{ValueType,en} {EnumValue}, {EnumType->_Data._DecoratedName,na}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Pointer">{ValueType,en} {PointerValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::ReferPointer">{ValueType,en} {ReferPointerValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::ObjectPointer">{ValueType,en} {ObjectPointerValue}</DisplayString>
+		<DisplayString Condition="ValueType==XE::EValueType::Raw">{ValueType,en} {RawValue}</DisplayString>
+		<Expand>
+			<Item Condition="ValueType==XE::EValueType::ReferPointer" Name="ReferPointer">ReferPointerValue</Item>
+		</Expand>
+	</Type>
+	<Type Name="XE::TVec2&lt;*&gt;">
+		<DisplayString>{{{X}, {Y}}}</DisplayString>
+	</Type>
+	<Type Name="XE::TVec4&lt;*&gt;">
+		<DisplayString>{{{X}, {Y}, {Z}, {W}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FColor32">
+		<DisplayString>[{int(X)}, {int(Y)}, {int(Z)}, {int(W)}]</DisplayString>
+	</Type>
+
+	<Type Name="XE::FGuid">
+		<DisplayString>{{{Data1,Xb}-{Data2,Xb}-{Data3,Xb}-{(unsigned short)((Data4[0]&lt;&lt;8) | Data4[1]),Xb}-{(unsigned short)((Data4[2]&lt;&lt;8) | Data4[3]),Xb}{(unsigned short)((Data4[4]&lt;&lt;8) | Data4[5]),Xb}{(unsigned short)((Data4[6]&lt;&lt;8) | Data4[7]),Xb}}}</DisplayString>
+	</Type>
+
+
+	<Type Name="XE::TVec4&lt;float&gt;">
+		<DisplayString>{{{X,g}, {Y,g}, {Z,g}, {W,g}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::vec2&lt;*&gt;">
+		<DisplayString>{{{x}, {y}}}</DisplayString>
+	</Type>
+	<Type Name="XE::vec3&lt;*&gt;">
+		<DisplayString>{{{x}, {y}, {z}}}</DisplayString>
+	</Type>
+	<Type Name="XE::size&lt;*&gt;">
+		<DisplayString>{{{w}, {h}}}</DisplayString>
+	</Type>
+	<Type Name="XE::vec4&lt;*&gt;">
+		<DisplayString>{{({x},{y}), [{cx},{cy}]}}</DisplayString>
+	</Type>
+
+	<!--<Type Name="std::basic_string_view&lt;char8_t,*&gt;" Priority="High">
+    <DisplayString>{xxxx}</DisplayString>
+  </Type>-->
+
+	<!--<Type Name="std::basic_string_view&lt;char8_t,*&gt;">
+    <Intrinsic Name="size" Expression="_Mysize" />
+    <Intrinsic Name="data" Expression="_Mydata" />
+    <DisplayString>{_Mydata,[_Mysize]}</DisplayString>
+    <Expand>
+      <Item Name="[size]" ExcludeView="simple">size()</Item>
+      <ArrayItems>
+        <Size>size()</Size>
+        <ValuePointer>data()</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>-->
+
+	<Type Name="XE::Atomic&lt;*&gt;">
+		<DisplayString>{Value}</DisplayString>
+	</Type>
+	<Type Name="XE::FSharedController">
+		<DisplayString Condition="Referencer!=0">{{{Referencer->SharedReferenceCount} shareds,{Referencer->WeakReferenceCount} weaks}}</DisplayString>
+		<DisplayString Condition="Referencer==0">no shareds</DisplayString>
+	</Type>
+	<Type Name="XE::TFlag&lt;*&gt;">
+		<DisplayString>{Value}</DisplayString>
+	</Type>
+	<Type Name="XE::TDeleterDefault&lt;*&gt;">
+		<DisplayString>{{default delter}}</DisplayString>
+	</Type>
+	<Type Name="XE::TUniquePtr&lt;*,*&gt;">
+		<DisplayString Condition="Pointer!=0">{Pointer}, {Deleter}</DisplayString>
+		<DisplayString Condition="Pointer==0">nullptr</DisplayString>
+	</Type>
+	<Type Name="XE::TSharedPtr&lt;*&gt;">
+		<DisplayString Condition="Pointer!=0">{Pointer}, {Controller}</DisplayString>
+		<DisplayString Condition="Pointer==0">nullptr</DisplayString>
+	</Type>
+	<Type Name="XE::FWeakController">
+		<DisplayString Condition="Referencer!=0">{{{Referencer->SharedReferenceCount} shareds,{Referencer->WeakReferenceCount} weaks}}</DisplayString>
+		<DisplayString Condition="Referencer==0">no shareds</DisplayString>
+	</Type>
+	<Type Name="XE::TWeakPtr&lt;*&gt;">
+		<DisplayString Condition="Pointer!=0">{Pointer}, {Controller}</DisplayString>
+		<DisplayString Condition="Pointer==0">nullptr</DisplayString>
+	</Type>
+	<Type Name="XE::TReferPtr&lt;*&gt;">
+		<DisplayString>{Pointer}</DisplayString>
+		<Expand HideRawView="true">
+			<Item Name="-> Pointer">Pointer</Item>
+			<ExpandedItem>Pointer</ExpandedItem>
+		</Expand>
+	</Type>
+	<Type Name="XE::TString&lt;*&gt;">
+		<DisplayString Condition="Size==0">NULL</DisplayString>
+		<DisplayString Condition="Size!=0">{Data,[Size]na}</DisplayString>
+		<StringView>Data,na</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	<Type Name="XE::TString&lt;char8_t&gt;">
+		<DisplayString Condition="Size==0">NULL</DisplayString>
+		<DisplayString Condition="Size!=0">{DataPtr,s8}</DisplayString>
+		<StringView>DataPtr,s8</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>DataCharPtr</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TView&lt;*&gt;" Priority="High">
+		<DisplayString Encoding="Ansi">{Data,[Size]s}</DisplayString>
+		<StringView>Data,[Size]</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TView&lt;char&gt;" Priority="High">
+		<DisplayString Encoding="Ansi">{Data,[Size]s}</DisplayString>
+		<StringView>Data,[Size]s8</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	<Type Name="XE::TView&lt;char8_t&gt;" Priority="High">
+		<DisplayString>{*(char **)this,[Size]s8}</DisplayString>
+		<StringView>*(char **)this,[Size]s8</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>*(char **)this,s8</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+	<Type Name="XE::TView&lt;wchar_t&gt;" Priority="High">
+		<DisplayString>{Data,[Size]su}</DisplayString>
+		<StringView>Data,[Size]su</StringView>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TTupleStorage&lt;.*&gt;,&lt;.*&gt;">
+		<DisplayString>{Key}, {Value}</DisplayString>
+		<Expand>
+			<Item Name="Key">Key</Item>
+			<Item Name="Value">Value</Item>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TTuple&lt;*,*&gt;" Priority="High">
+		<DisplayString>[{Key}] {Value}</DisplayString>
+		<Expand>
+			<Item Name="Key">Key</Item>
+			<Item Name="Value">Value</Item>
+		</Expand>
+	</Type>
+	<Type Name="XE::TTuple&lt;*, *&gt;" IncludeView="MapHelper">
+		<DisplayString>{Value}</DisplayString>
+		<Expand>
+			<Item Name="Key">Key</Item>
+			<Item Name="Value">Value</Item>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::FBitSet">
+		<DisplayString>{{Size={Size}}}</DisplayString>
+		<Expand>
+			<IndexListItems>
+				<Size>Size</Size>
+				<ValueNode>(Data[$i / sizeof(Data[0]) / 8] &gt;&gt; ($i % (sizeof(Data[0]) * 8))) &amp; 1,d</ValueNode>
+			</IndexListItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TArray&lt;*,*&gt;">
+		<DisplayString>ArraySize={$T2}, {Data,na}</DisplayString>
+		<Expand>
+			<ArrayItems>
+				<Size>$T2</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TView&lt;*&gt;">
+		<DisplayString Condition="Size == 0">&lt;Empty&gt;</DisplayString>
+		<DisplayString Condition="Size&gt;0">Size={Size}, {Data}</DisplayString>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TVector&lt;*&gt;">
+		<DisplayString Condition="Size == 0">&lt;Empty&gt;</DisplayString>
+		<DisplayString Condition="Size&gt;0">Size={Size}</DisplayString>
+		<Expand>
+			<ArrayItems>
+				<Size>Size</Size>
+				<ValuePointer>Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TRBTreeNode&lt;*&gt;">
+		<DisplayString>[{Item}, {Color}]</DisplayString>
+	</Type>
+
+	<Type Name="XE::TPair&lt;*&gt;">
+		<DisplayString>[{Key}, {Value}]</DisplayString>
+	</Type>
+
+
+	<Type Name="XE::TRBTree&lt;*,*&gt;">
+		<DisplayString>{{Size={Size}, Root={Anchor.Parent}}}</DisplayString>
+		<Expand>
+			<!--<Item Name="&lt;Root&gt;">Anchor.Parent</Item>-->
+			<TreeItems>
+				<HeadPointer>Anchor.Parent</HeadPointer>
+				<LeftPointer>Left</LeftPointer>
+				<RightPointer>Right</RightPointer>
+				<ValueNode Name="{Item.Key}">Item.Value,view(MapHelper)</ValueNode>
+			</TreeItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::TSet&lt;*,*&gt;">
+		<DisplayString>{{Size={Size}, Root={Anchor.Parent}}}</DisplayString>
+		<Expand>
+			<!--<Item Name="&lt;Root&gt;">Anchor.Parent</Item>-->
+			<TreeItems>
+				<HeadPointer>Anchor.Parent</HeadPointer>
+				<LeftPointer>Left</LeftPointer>
+				<RightPointer>Right</RightPointer>
+				<ValueNode Name="{Item}">Item,view(MapHelper)</ValueNode>
+			</TreeItems>
+		</Expand>
+	</Type>
+
+	<Type Name="XE::Core3D::FLambdaCommand&lt;*&gt;">
+		<DisplayString>{Name,na}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FPath">
+		<DisplayString>{FilePath}</DisplayString>
+	</Type>
+
+	<Type Name="XE::Engine::IEngineObject">
+		<DisplayString>{{Name={Name}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FObject">
+		<DisplayString>{{ReferCount={ReferCount}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::FRoutedEvent">
+		<DisplayString>{{{Name} Event}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::FRoutedEventArgs">
+		<DisplayString>{{{RoutedEvent} Args}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UVisual">
+		<DisplayString>{{Visual, {VisualChildren.Size} Visuals}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UControl">
+		<DisplayString>{{Control, {Controls.Size} Controls}}</DisplayString>
+		<!--<Expand HideRawView="false">
+      <Item Name="ReferCount">ReferCount</Item>
+      <ArrayItems>
+        <Size>Controls.Size</Size>
+        <ValuePointer>Controls.Data</ValuePointer>
+      </ArrayItems>
+    </Expand>-->
+	</Type>
+
+	<Type Name="XE::UI::UContentPresenter">
+		<DisplayString>{{ContentPresenter}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UVBox">
+		<DisplayString>{{VBox}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UButton">
+		<DisplayString>{{Button}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UHBox">
+		<DisplayString>{{HBox}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UForm">
+		<DisplayString>{{Form, Title={Title}}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::UI::UBorder">
+		<DisplayString>{{Border}}</DisplayString>
+	</Type>
+
+	<Type Name="XE::FSolidBrush">
+		<DisplayString>{{SolidBrush {Color}}}</DisplayString>
+	</Type>
+
+
+	<Type Name="XE::Windows::TCoMemPtr&lt;*&gt;">
+		<DisplayString>{Pointer,na}</DisplayString>
+		<Expand HideRawView="true">
+			<Item Name="-> Pointer">Pointer</Item>
+			<ExpandedItem>Pointer</ExpandedItem>
+		</Expand>
+	</Type>
+
+	<Type Name="_ITEMIDLIST">
+		<DisplayString>{(wchar_t*)(mkid.abID + 78),na}...</DisplayString>
+	</Type>
+</AutoVisualizer>

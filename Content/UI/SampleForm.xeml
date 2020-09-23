@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Form Title="准备就绪" Foreground="Black" Size="1920,1080">
+	<VBox Background="Red">
+		<!--<HBox Background="Green">
+			<Button Content="测试按钮 0000" />
+			<Button Content="测试按钮 1111" />
+		</HBox>-->
+		<Button Content="TestButton A" />
+		<Button Content="TestButton B" Margin="0,10,0,10" />
+		<HBox Background="Green">
+			<Button Content="测试按钮 2222" />
+			<Button Content="测试按钮 3333 测试按钮" />
+		</HBox>
+		<Button Content="TestButton C" />
+		<Button Content="TestButton D" />
+		<Button Content="TestButton E" />
+		<HBox Background="Green">
+			<Button Content="测试按钮 4444" />
+			<Button Content="测试按钮 5555 测试按钮测试按钮测试按钮" />
+		</HBox>
+	</VBox>
+</Form>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Material DisplayName="默认材质">
+  <Configuration>
+    <WireFrame>False</WireFrame>
+    <CullMode>Back</CullMode>
+  </Configuration>
+  <Parameters>
+    <Parameter Name="BaseColor" Type="Texture" Include="Textures/Wolf/Body.xres"/>
+    <Parameter Name="Roughness" Type="Float" Value="0.5" />
+  </Parameters>
+</Material>

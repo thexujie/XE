@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="fbxsdk::FbxVectorTemplate4&lt;fbxsdk::FbxVectorTemplate4&lt;*&gt;&gt;">
+    <DisplayString>[{mData[0]}, {mData[1]}, {mData[2]}, {mData[3]}]</DisplayString>
+    <Expand>
+      <Item Name="[0]">mData[0]</Item>
+      <Item Name="[1]">mData[1]</Item>
+      <Item Name="[2]">mData[2]</Item>
+      <Item Name="[3]">mData[3]</Item>
+    </Expand>
+  </Type>
+
+  <Type Name="fbxsdk::FbxVectorTemplate3&lt;*&gt;">
+    <DisplayString>[{mData[0],g}, {mData[1],g}, {mData[2],g}]</DisplayString>
+  </Type>
+
+  <Type Name="fbxsdk::FbxVectorTemplate4&lt;*&gt;">
+    <DisplayString>[{mData[0],g}, {mData[1],g}, {mData[2],g}, {mData[3],g}]</DisplayString>
+  </Type>
+
+  <Type Name="fbxsdk::FbxString">
+    <DisplayString>{mData,na}</DisplayString>
+  </Type>
+
+  <Type Name="fbxsdk::FbxObject">
+    <DisplayString>{mName.mCurrentName}</DisplayString>
+  </Type>
+</AutoVisualizer>
